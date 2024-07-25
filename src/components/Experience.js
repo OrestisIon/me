@@ -76,6 +76,7 @@ export default function Experience({ color }) {
               .map((exp) => (
                 <Fade bottom>
                   <Card key={exp.company} size="sm">
+
                     <CardHeader>
                       <Flex justifyContent="space-between">
                         <HStack>
