@@ -47,6 +47,7 @@ const parseProfile = (mdContent) => {
           profile["linkedin"] = "https://www.linkedin.com/in/orestis-iona-cs/";
           profile["email"] = "orestisj@gmail.com";
           profile["github"] = "https://github.com/OrestisIon";
+          profile["pproject"] = "https://github.com/OrestisIon/FeedGPT";
           break;
         case "Logo":
           profile.logo = lines[++i].substr(2).trim();

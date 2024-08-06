@@ -10,7 +10,7 @@ import {
   CardBody,
   CardFooter,
   Flex,
-  Badge,
+  // Badge,
   Image,
   List,
   ListItem,
@@ -108,14 +108,14 @@ export default function Experience({ color }) {
                     </CardBody>
                     <CardFooter>
                       <HStack spacing={2}>
-                        {exp.badges.map((badge) => (
+                        {/* {exp.badges.map((badge) => (
                           <Badge
                             key={badge.name}
                             colorScheme={badge.colorScheme}
                           >
                             {badge.name}
                           </Badge>
-                        ))}
+                        ))} */}
                       </HStack>
                     </CardFooter>
                   </Card>
