@@ -10,6 +10,7 @@ import {
 export default function Hobbies({ color }) {
     return (
         <>
+            <Box bg="gray.800" py={{ base: 10, md: 16 }}>
             <Container maxW={"3xl"} id="hobbies">
                 <Stack
                     as={Box}
@@ -32,6 +33,7 @@ export default function Hobbies({ color }) {
                     </Text>
                 </Stack>
             </Container>
+            </Box>
         </>
     );
 }
