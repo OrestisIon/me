@@ -22,7 +22,7 @@ import {
 import { MoonIcon, SunIcon, HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import ProfileArray from "./ProfileArray";
-const TbIcons = require("react-icons/tb");
+import * as TbIcons from "react-icons/tb";
 
 export default function Nav({ color, currentUser, onLogout, onAdminPanel }) {
   const profile = ProfileArray();

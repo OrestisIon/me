@@ -3,7 +3,7 @@
 export const ACCESS_STORAGE_KEY = 'portfolio_access_requests';
 export const APPROVED_CODES_KEY = 'portfolio_approved_codes';
 export const CURRENT_USER_KEY = 'portfolio_current_user';
-export const ADMIN_CODE = process.env.REACT_APP_ADMIN_CODE || '12345678'; // Admin access code from .env
+export const ADMIN_CODE = import.meta.env.VITE_ADMIN_CODE || '12345678'; // Admin access code from .env
 
 // Get all access requests
 export const getAccessRequests = () => {
