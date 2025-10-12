@@ -13,13 +13,18 @@ import {
   useDisclosure,
   HStack,
   Link,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  // Text,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon, HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import ProfileArray from "./ProfileArray";
 const TbIcons = require("react-icons/tb");
 
-export default function Nav({ color }) {
+export default function Nav({ color, currentUser, onLogout, onAdminPanel }) {
   const profile = ProfileArray();
   const colors = {
   "blue": "#3182CE", 
@@ -45,12 +50,20 @@ export default function Nav({ color }) {
     const aboutSection = document.querySelector("#about");
     aboutSection.scrollIntoView({ behavior: "smooth" });
   };
+  const scrollToTechStack = () => {
+    const aboutSection = document.querySelector("#techstack");
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  };
   const scrollToExperience = () => {
     const experienceSection = document.querySelector("#experience");
     experienceSection.scrollIntoView({ behavior: "smooth" });
   };
   const scrollToProjects = () => {
     const projectsSection = document.querySelector("#projects");
+    projectsSection.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToHobbies = () => {
+    const projectsSection = document.querySelector("#hobbies");
     projectsSection.scrollIntoView({ behavior: "smooth" });
   };
   const scrollToContact = () => {
@@ -101,11 +114,17 @@ export default function Nav({ color }) {
                 <Button variant="ghost" onClick={scrollToAbout}>
                   About
                 </Button>
+                <Button variant="ghost" onClick={scrollToTechStack}>
+                  Tech Stack
+                </Button>
                 <Button variant="ghost" onClick={scrollToExperience}>
                   Experience
                 </Button>
                 <Button variant="ghost" onClick={scrollToProjects}>
                   Projects
+                </Button>
+                <Button variant="ghost" onClick={scrollToHobbies}>
+                  Hobbies
                 </Button>
                 <Button variant="ghost" onClick={scrollToContact}>
                   Contact
@@ -114,6 +133,21 @@ export default function Nav({ color }) {
             ) : (
               <></>
             )}
+
+            {currentUser && (
+              <Menu>
+                <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                  {currentUser.isAdmin ? "Admin" : currentUser.fullName?.split(' ')[0] || "User"}
+                </MenuButton>
+                <MenuList>
+                  {currentUser.isAdmin && (
+                    <MenuItem onClick={onAdminPanel}>Admin Panel</MenuItem>
+                  )}
+                  <MenuItem onClick={onLogout}>Logout</MenuItem>
+                </MenuList>
+              </Menu>
+            )}
+
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
@@ -133,16 +167,34 @@ export default function Nav({ color }) {
                     <DrawerBody>
                       <Button variant="ghost" onClick={scrollToAbout}>
                         About
-                      </Button>
+                        </Button>
+                        <Button variant="ghost" onClick={scrollToTechStack}>
+                          Tech Stack
+                        </Button>
                       <Button variant="ghost" onClick={scrollToExperience}>
                         Experience
-                      </Button>
+                        </Button>
                       <Button variant="ghost" onClick={scrollToProjects}>
                         Projects
-                      </Button>
+                        </Button>
+                        <Button variant="ghost" onClick={scrollToHobbies}>
+                          Hobbies
+                        </Button>
                       <Button variant="ghost" onClick={scrollToContact}>
                         Contact
                       </Button>
+                      {currentUser && (
+                        <>
+                          {currentUser.isAdmin && (
+                            <Button variant="ghost" onClick={onAdminPanel}>
+                              Admin Panel
+                            </Button>
+                          )}
+                          <Button variant="ghost" onClick={onLogout} colorScheme="red">
+                            Logout
+                          </Button>
+                        </>
+                      )}
                     </DrawerBody>
                   </DrawerContent>
                 </Drawer>

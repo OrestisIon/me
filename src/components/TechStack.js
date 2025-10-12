@@ -27,7 +27,7 @@ export default function TechStack({ color }) {
           <Stack align="center" direction="row" px={4}>
             <HStack mx={4}>
               <Text color={`${color}.400`} fontWeight={800}>
-                01.5
+                02
               </Text>
               <Text fontWeight={800}>Tech Stack</Text>
             </HStack>
