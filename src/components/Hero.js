@@ -17,13 +17,22 @@ export default function Header({ color }) {
     const contactSection = document.querySelector("#contact");
     contactSection.scrollIntoView({ behavior: "smooth" });
   };
-  const linkedin = () => {
+  // const linkedin = () => {
+  //   window.open(
+  //               `${profile.linkedin}`,
+  //               "_blank",
+  //               "noreferrer,noopener"
+  //             );
+  // };
+
+  const proj = () => {
     window.open(
-                `${profile.linkedin}`,
-                "_blank",
-                "noreferrer,noopener"
-              );
+      `${profile.pproject}`,
+      "_blank",
+      "noreferrer,noopener"
+    );
   };
+
   return (
     <>
       <Heading>
@@ -64,7 +73,7 @@ export default function Header({ color }) {
             alignSelf={"center"}
             position={"relative"}
           >
-            <Button
+            {/* <Button
               colorScheme={color}
               bg={`${color}.400`}
               rounded={"full"}
@@ -75,7 +84,23 @@ export default function Header({ color }) {
               onClick={linkedin}
             >
               Let's connect!
+            </Button> */}
+
+            <Button
+              colorScheme={color}
+              bg={`${color}.500`}
+              rounded={"full"}
+              px={8}
+              py={6}
+              fontSize={"lg"}
+              _hover={{
+                bg: `${color}.600`,
+              }}
+              onClick={proj}
+            >
+              FeedGPT
             </Button>
+
             <Button
               variant={"link"}
               colorScheme={"blue"}
@@ -97,11 +122,11 @@ export default function Header({ color }) {
                 fontSize={"lg"}
                 fontFamily={"Caveat"}
                 position={"absolute"}
-                right={"-85px"}
+                right={"-150px"}
                 top={"-15px"}
                 transform={"rotate(10deg)"}
               >
-                Click me!
+                My LLM/RAG Application!
               </Text>
             </Box>
           </Stack>

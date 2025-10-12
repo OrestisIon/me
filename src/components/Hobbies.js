@@ -20,7 +20,7 @@ export default function Hobbies({ color }) {
                     <Stack align="center" direction="row" px={4}>
                         <HStack mx={4}>
                             <Text color={`${color}.400`} fontWeight={800}>
-                                04
+                                05
                             </Text>
                             <Text fontWeight={800}>Hobbies</Text>
                         </HStack>
