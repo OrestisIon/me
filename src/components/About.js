@@ -13,7 +13,6 @@ export default function About({ color }) {
   const profile = ProfileArray();
     return (
       <>
-        <Box bg="gray.800" py={{ base: 10, md: 16 }}>
         <Container maxW={"3xl"} id="about">
           <Stack
             as={Box}
@@ -39,7 +38,6 @@ export default function About({ color }) {
             </Flex>
           </Stack>
         </Container>
-        </Box>
       </>
     );
 }

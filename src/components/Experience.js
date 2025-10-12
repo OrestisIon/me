@@ -42,7 +42,6 @@ export default function Experience({ color }) {
 
   return (
     <>
-      <Box bg="gray.800" py={{ base: 10, md: 16 }}>
       <Container maxW={"3xl"} id="experience">
         <Stack
           as={Box}
@@ -125,7 +124,6 @@ export default function Experience({ color }) {
           </Stack>
         </Stack>
       </Container>
-      </Box>
     </>
   );
 }

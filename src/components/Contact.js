@@ -24,7 +24,6 @@ export default function Contact({ color }) {
   };
   return (
     <>
-      <Box bg="gray.900" py={{ base: 10, md: 16 }}>
       <Container maxW={"3xl"} id="contact">
         <Stack
           as={Box}
@@ -66,7 +65,6 @@ export default function Contact({ color }) {
           </Stack>
         </Stack>
       </Container>
-      </Box>
     </>
   );
 }

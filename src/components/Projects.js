@@ -58,7 +58,6 @@ export default function Projects({ color }) {
     
 return (
     <>
-      <Box bg="gray.900" py={{ base: 10, md: 16 }}>
       <Container maxW={"3xl"} id="projects">
         <Stack
           as={Box}
@@ -227,7 +226,6 @@ return (
           </SimpleGrid>
         </Stack>
       </Container>
-      </Box>
     </>
   );
 }
