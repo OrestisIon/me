@@ -13,18 +13,14 @@ import {
   useDisclosure,
   HStack,
   Link,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
   // Text,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon, HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import ProfileArray from "./ProfileArray";
 import * as TbIcons from "react-icons/tb";
 
-export default function Nav({ color, currentUser, onLogout, onAdminPanel }) {
+export default function Nav({ color }) {
   const profile = ProfileArray();
   const colors = {
   "blue": "#3182CE", 
@@ -134,20 +130,6 @@ export default function Nav({ color, currentUser, onLogout, onAdminPanel }) {
               <></>
             )}
 
-            {currentUser && (
-              <Menu>
-                <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                  {currentUser.isAdmin ? "Admin" : currentUser.fullName?.split(' ')[0] || "User"}
-                </MenuButton>
-                <MenuList>
-                  {currentUser.isAdmin && (
-                    <MenuItem onClick={onAdminPanel}>Admin Panel</MenuItem>
-                  )}
-                  <MenuItem onClick={onLogout}>Logout</MenuItem>
-                </MenuList>
-              </Menu>
-            )}
-
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
@@ -183,18 +165,6 @@ export default function Nav({ color, currentUser, onLogout, onAdminPanel }) {
                       <Button variant="ghost" onClick={scrollToContact}>
                         Contact
                       </Button>
-                      {currentUser && (
-                        <>
-                          {currentUser.isAdmin && (
-                            <Button variant="ghost" onClick={onAdminPanel}>
-                              Admin Panel
-                            </Button>
-                          )}
-                          <Button variant="ghost" onClick={onLogout} colorScheme="red">
-                            Logout
-                          </Button>
-                        </>
-                      )}
                     </DrawerBody>
                   </DrawerContent>
                 </Drawer>
