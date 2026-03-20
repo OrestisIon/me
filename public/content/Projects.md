@@ -1,3 +1,12 @@
+## UK Flathunter
+Automated rental property search bot that monitors Rightmove & Zoopla and sends instant notifications via Telegram, Slack and more
+- ![600x200](/images/docker.png)
+- Tags: Python, Automation, Web Scraping
+- Badges:
+  - Personal Project [green]
+- Buttons:
+  - Link [https://github.com/OrestisIon/uk-flathunter]
+
 ## Deutsche Bank Campus Project
 State of the art Web Application with integrated Machine Learning 
 - ![600x200](/images/dbp.png)

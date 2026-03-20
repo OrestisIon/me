@@ -27,8 +27,7 @@ export default function Hobbies({ color }) {
                         <Divider orientation="horizontal" />
                     </Stack>
                     <Text color={"gray.600"} fontSize={"xl"} px={4}>
-                        In addition to my professional pursuits, I am deeply passionate about leading a healthy and active lifestyle. For the past two years, I have been dedicated to bodybuilding, embarking on a journey of self-training and self-improvement. Recently, I've also delved into the thrilling world of Rugby, which not only keeps me physically active but also nurtures teamwork and camaraderie. My commitment to holistic wellness extends to a keen interest in healthy nutrition. I firmly believe that a balanced diet is the foundation of a vibrant life. Through personalized training programs, I strive to empower individuals to enhance not only their physical capabilities but their overall quality of life, guided by careful dieting protocols. These hobbies not only bring joy and fulfillment to my life but also fuel my dedication to helping others achieve their fitness and well-being goals.
-
+                        Outside of work, I am driven by a deep passion for fitness, nutrition, nature, and travel. I have dedicated years to bodybuilding and strength training, constantly pushing my limits and refining my approach to physical performance. I believe that what you eat is just as important as how you train — nutrition is a subject I study carefully and apply with discipline. Beyond the gym, I find balance and inspiration in the natural world. Whether hiking through rugged landscapes or simply spending time outdoors, nature keeps me grounded. Travel is another core passion — exploring new cultures, cuisines, and environments fuels my curiosity and broadens my perspective in ways that complement both my personal and professional growth.
                     </Text>
                 </Stack>
             </Container>
