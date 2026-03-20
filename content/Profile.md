@@ -2,9 +2,9 @@
 - Portable Portfolio
 
 ## Header
-- Hi, my name is Orestis. 
-- I'm a software engineer.
-- I'm passionate about creating innovative solutions through code, and I love turning complex problems into elegant, user-friendly applications that make a difference.
+- Hi, my name is Orestis.
+- I'm a Software Engineer.
+- Building cloud-native core banking infrastructure at Thought Machine. First Class BSc Computer Science, University of Warwick.
 
 ## About
 Write your "About" section here.

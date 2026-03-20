@@ -1,29 +1,31 @@
-## TEAMWORK Internship Program                                                          
--  LMobile App Software DeveloperL | June'22 - July'22
+## Thought Machine
+- LSoftware Engineer & Site Reliability EngineerL | 2024 - Present
+- ![logo512](/images/golang.png)
+- Tags: Full-Time
+- Badges:
+  - Full-Time [teal]
+- List Items:
+  - Developed and shipped features for Cloud Control, including projected cost visibility and infrastructure sync status, helping engineers manage client environments more proactively.
+  - Engineered a timeout condition for Deployment Hub provisioning via taskgraph, reducing failure-to-feedback time by 45% and contributing to a 95% availability SLO.
+  - Delivered Testing as a Service for one of Europe's 10 largest banks, building 400+ test cases and validating infrastructure for 100 million accounts at over 10,000 transactions per second.
+  - Resolved 100% of P1 client-facing issues during peak sales periods, directly supporting the closure of two major deals.
+  - Optimised infrastructure pipelines to enable provisioning of over 100 clusters in a single week, accelerating new client environment delivery.
+
+## TEAMWORK Internship Program
+- LMobile App Software DeveloperL | Apr'22 - Aug'22
 - ![logo512](/images/team.jpeg)
-- Tags: Internship 1
+- Tags: Internship
 - Badges:
-  - Badge [blue]
+  - Internship [blue]
 - List Items:
-  - Collaborated with a multicultural team to develop and launch a virtual assistant android application for diagnosing rare diseases, under the guidance of Dr. Gallanzi.
-  - Resolved application and interface issues, ensuring optimal performance, function, and usability, and contributed to the delivery of a high-quality, user-friendly product.
+  - Built and deployed a full-stack AI Android application using Google Cloud, improving database connection efficiency and AI model performance by 40%.
+  - Collaborated with a multicultural team to develop a virtual assistant application for diagnosing rare diseases.
 
-## JPMorgan Chase
-- LSoftware Engineering Virtual Experiencej | Aug'22 - Sep'22
-- ![logo512](/images/JPmorgan.png)
-- Tags: Internship 2
-- Badges:
-  - Badge [blue]
-- List Items:
-  - Data-Driven Trader Dashboard: Designed and developed a dynamic trader dashboard leveraging JPMorgan's cutting-edge data visualization framework. Empowered traders with the ability to perform complex computations and execute advanced queries for real-time stock analysis and monitoring.
-  - Virtual Collaboration and Real-World Insights: Successfully tackled complex challenges by working on a real-world project in a virtual environment. Demonstrated problem-solving prowess, critical thinking skills, and effective collaboration while gaining valuable insights into JPMorgan's business operations and corporate culture.
-
-## Army
--  LSoldierL | Jul'20 - Sep'21
+## National Guard Cyprus
+- LSoldierL | Jul'20 - Sep'21
 - ![logo512](/images/army.png)
-- Tags: Army Experience
+- Tags: Military Service
 - Badges:
-  - Badge [blue]
+  - Service [blue]
 - List Items:
-  - Leadership in High-Pressure Environments: Acquired and honed essential leadership skills during a period of rigorous army training. Demonstrated resilience, adaptability, and the ability to make critical decisions under high-pressure situations, ensuring the successful completion of tasks and missions.
-  - Teamwork and Communication Mastery: Cultivated strong teamwork and communication abilities while serving as a soldier. Collaborated effectively with peers to achieve common goals, fostering a cohesive and efficient team dynamic essential for military operations.
+  - Strengthened leadership, decision-making, and teamwork skills in high-pressure environments, demonstrating resilience and adaptability under strict protocols.
