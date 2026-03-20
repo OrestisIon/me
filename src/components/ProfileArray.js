@@ -19,7 +19,7 @@ const parseProfile = (mdContent) => {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
 
-  console.log(line)
+  // console.log(line)
 
     if (line.startsWith("## ")) {
       const section = line.substr(3).trim();
@@ -33,7 +33,7 @@ const parseProfile = (mdContent) => {
           break;
         case "About":
           profile.about = lines[++i].trim();
-          profile.about = "I'm a final-year Computer Science student brimming with enthusiasm and a strong technical foundation. My academic journey has been an exhilarating exploration of algorithms, data structures, and software engineering, but what truly ignites my passion is the art of coding and the relentless pursuit of innovation. Collaborating with diverse teams on projects has not only sharpened my technical skills but also enhanced my ability to communicate effectively. I'm actively seeking opportunities to contribute to innovative projects, combining my technical expertise with a commitment to making a transformative impact through technology. Welcome to my portfolio, where I showcase my passion, curiosity, and dedication to excellence. Let's embark on this exciting journey of tech exploration and professional growth together!";
+          profile.about = "Software Engineer at Thought Machine, working on cloud-native core banking infrastructure used by leading financial institutions worldwide. I graduated with a First Class BSc in Computer Science from the University of Warwick, where I built a strong foundation across software engineering, algorithms, systems programming, and cyber security. I enjoy working across the stack — from distributed systems and infrastructure to full-stack features — and thrive in environments where engineering decisions have real impact at scale.";
           break;
         case "Contact":
           profile.contact = lines[++i].trim();
@@ -47,6 +47,7 @@ const parseProfile = (mdContent) => {
           profile["linkedin"] = "https://www.linkedin.com/in/orestis-iona-cs/";
           profile["email"] = "orestisj@gmail.com";
           profile["github"] = "https://github.com/OrestisIon";
+          profile["project"] = "https://github.com/OrestisIon/FeedGPT";
           break;
         case "Logo":
           profile.logo = lines[++i].substr(2).trim();

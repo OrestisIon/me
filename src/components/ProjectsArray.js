@@ -57,7 +57,7 @@ const ProjectsArray = () => {
         return response.text();
       })
       .then((mdContent) => {
-        console.log(mdContent);
+        // console.log(mdContent);
         setProjects(parseProjects(mdContent));
       })
       .catch((error) => {
