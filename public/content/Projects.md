@@ -1,3 +1,12 @@
+## FeedGPT
+AI-powered RSS reader with a chat assistant that personalises content using LLMs and RAG — achieved 4.8/5 user satisfaction and 25% boost in engagement over leading RSS platforms
+- ![600x200](/images/aws.png)
+- Tags: AI, FastAPI, Python, PostgreSQL
+- Badges:
+  - Personal Project [purple]
+- Buttons:
+  - Link [https://github.com/OrestisIon/FeedGPT]
+
 ## UK Flathunter
 Automated rental property search bot that monitors Rightmove & Zoopla and sends instant notifications via Telegram, Slack and more
 - ![600x200](/images/docker.png)
