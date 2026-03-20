@@ -4,7 +4,7 @@
 ## Header
 - Hi, my name is Orestis.
 - I'm a Software Engineer.
-- Building cloud-native core banking infrastructure at Thought Machine. First Class BSc Computer Science, University of Warwick.
+- Building cloud-native infrastructure at Thought Machine. First Class BSc Computer Science, University of Warwick.
 
 ## About
 Write your "About" section here.
