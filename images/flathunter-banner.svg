@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071a0e"/>
+      <stop offset="100%" stop-color="#0a1f2e"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="50%" stop-color="#a7f3d0"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <!-- Ambient glows -->
+  <ellipse cx="200" cy="200" rx="300" ry="220" fill="url(#glow1)" filter="url(#blur1)"/>
+  <ellipse cx="680" cy="160" rx="200" ry="180" fill="url(#glow2)" filter="url(#blur2)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#059669" fill-opacity="0.12"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#dots)"/>
+
+  <!-- Circuit lines decorative -->
+  <g stroke="#059669" stroke-opacity="0.18" stroke-width="1" fill="none">
+    <polyline points="620,0 620,70 700,70 700,140 760,140"/>
+    <polyline points="720,400 720,310 680,310 680,240 740,240"/>
+    <circle cx="700" cy="70" r="3" fill="#34d399" fill-opacity="0.35" stroke="none"/>
+    <circle cx="680" cy="240" r="3" fill="#34d399" fill-opacity="0.35" stroke="none"/>
+  </g>
+
+  <!-- Map grid lines (subtle) -->
+  <g stroke="#059669" stroke-opacity="0.07" stroke-width="1">
+    <line x1="500" y1="0" x2="500" y2="400"/>
+    <line x1="560" y1="0" x2="560" y2="400"/>
+    <line x1="620" y1="0" x2="620" y2="400"/>
+    <line x1="680" y1="0" x2="680" y2="400"/>
+    <line x1="740" y1="0" x2="740" y2="400"/>
+    <line x1="480" y1="60" x2="800" y2="60"/>
+    <line x1="480" y1="120" x2="800" y2="120"/>
+    <line x1="480" y1="180" x2="800" y2="180"/>
+    <line x1="480" y1="240" x2="800" y2="240"/>
+    <line x1="480" y1="300" x2="800" y2="300"/>
+    <line x1="480" y1="360" x2="800" y2="360"/>
+  </g>
+
+  <!-- Location pins on map grid -->
+  <g>
+    <!-- Pin 1 -->
+    <circle cx="530" cy="110" r="6" fill="#34d399" fill-opacity="0.7"/>
+    <circle cx="530" cy="110" r="10" fill="#34d399" fill-opacity="0.15"/>
+    <!-- Pin 2 -->
+    <circle cx="585" cy="175" r="5" fill="#34d399" fill-opacity="0.5"/>
+    <circle cx="585" cy="175" r="9" fill="#34d399" fill-opacity="0.1"/>
+    <!-- Pin 3 -->
+    <circle cx="650" cy="95" r="7" fill="#10b981" fill-opacity="0.8"/>
+    <circle cx="650" cy="95" r="13" fill="#10b981" fill-opacity="0.15"/>
+    <!-- Pin 4 -->
+    <circle cx="710" cy="200" r="5" fill="#34d399" fill-opacity="0.5"/>
+    <circle cx="700" cy="260" r="4" fill="#34d399" fill-opacity="0.4"/>
+    <circle cx="560" cy="300" r="5" fill="#34d399" fill-opacity="0.45"/>
+    <circle cx="630" cy="340" r="4" fill="#34d399" fill-opacity="0.35"/>
+  </g>
+
+  <!-- House icon (stylized) -->
+  <g transform="translate(62, 62)" fill="#34d399" opacity="0.7">
+    <!-- Roof -->
+    <polygon points="38,0 76,36 0,36" fill="#10b981" opacity="0.9"/>
+    <!-- Door frame / body -->
+    <rect x="8" y="36" width="60" height="44" fill="#059669" opacity="0.8"/>
+    <!-- Door -->
+    <rect x="28" y="50" width="20" height="30" rx="2" fill="#6ee7b7" opacity="0.6"/>
+    <!-- Windows -->
+    <rect x="10" y="42" width="14" height="12" rx="1" fill="#a7f3d0" opacity="0.5"/>
+    <rect x="52" y="42" width="14" height="12" rx="1" fill="#a7f3d0" opacity="0.5"/>
+  </g>
+
+  <!-- Telegram logo -->
+  <g transform="translate(665, 38) scale(0.23)">
+    <defs>
+      <linearGradient id="tgGrad" x1="50%" x2="50%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#2AABEE"/>
+        <stop offset="100%" stop-color="#229ED9"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#tgGrad)" d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51 0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0Z"/>
+    <path fill="#FFF" d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152 35.56-14.786 42.94-17.354 47.76-17.441 1.06-.017 3.42.245 4.96 1.49 1.28 1.05 1.64 2.47 1.82 3.467.16.996.38 3.266.2 5.038-1.92 20.24-10.26 69.356-14.5 92.026-1.78 9.592-5.32 12.808-8.74 13.122-7.44.684-13.08-4.912-20.28-9.63-11.26-7.386-17.62-11.982-28.56-19.188-12.64-8.328-4.44-12.906 2.76-20.386 1.88-1.958 34.64-31.748 35.26-34.45.08-.338.16-1.598-.6-2.262-.74-.666-1.84-.438-2.64-.258-1.14.256-19.12 12.152-54 35.686-5.1 3.508-9.72 5.218-13.88 5.128-4.56-.098-13.36-2.584-19.9-4.708-8-2.606-14.38-3.984-13.82-8.41.28-2.304 3.46-4.662 9.52-7.072Z"/>
+  </g>
+
+  <!-- Notification pulse ring around telegram -->
+  <circle cx="688" cy="62" r="26" fill="none" stroke="#2AABEE" stroke-width="1.5" stroke-opacity="0.3"/>
+  <circle cx="688" cy="62" r="32" fill="none" stroke="#2AABEE" stroke-width="1" stroke-opacity="0.15"/>
+
+  <!-- Main title -->
+  <text x="110" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" letter-spacing="-1.5" fill="url(#titleGrad)">UK Flathunter</text>
+
+  <!-- Subtitle -->
+  <text x="112" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#6ee7b7" opacity="0.7" letter-spacing="0.4">Automated Rental Property Search Bot</text>
+
+  <!-- Feature chips -->
+  <g transform="translate(112, 248)">
+    <rect x="0" y="0" width="130" height="30" rx="8" fill="#059669" fill-opacity="0.2" stroke="#059669" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="65" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6ee7b7" text-anchor="middle" letter-spacing="0.3">Rightmove &amp; Zoopla</text>
+
+    <rect x="140" y="0" width="130" height="30" rx="8" fill="#059669" fill-opacity="0.2" stroke="#059669" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="205" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6ee7b7" text-anchor="middle" letter-spacing="0.3">Telegram Alerts</text>
+
+    <rect x="280" y="0" width="100" height="30" rx="8" fill="#059669" fill-opacity="0.2" stroke="#059669" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="330" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6ee7b7" text-anchor="middle" letter-spacing="0.3">Slack + More</text>
+  </g>
+
+  <!-- Tech stack line -->
+  <g transform="translate(112, 315)" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#34d399" opacity="0.55">
+    <text x="0" y="0">Python</text>
+    <text x="55" y="0">·</text>
+    <text x="65" y="0">Web Scraping</text>
+    <text x="170" y="0">·</text>
+    <text x="180" y="0">Automation</text>
+    <text x="270" y="0">·</text>
+    <text x="280" y="0">Telegram API</text>
+  </g>
+
+  <!-- Horizontal rule -->
+  <line x1="112" y1="335" x2="460" y2="335" stroke="#059669" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Bottom label -->
+  <text x="112" y="358" font-family="system-ui, sans-serif" font-size="11" fill="#059669" opacity="0.55" letter-spacing="1.5" font-weight="600">PERSONAL PROJECT</text>
+</svg>

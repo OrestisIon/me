@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07101f"/>
+      <stop offset="100%" stop-color="#0d1b38"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052cc" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#003d99" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b00" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0052cc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="50%" stop-color="#bfdbfe"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <!-- Ambient glows -->
+  <ellipse cx="220" cy="160" rx="300" ry="220" fill="url(#glow1)" filter="url(#blur1)"/>
+  <ellipse cx="680" cy="280" rx="200" ry="160" fill="url(#glow2)" filter="url(#blur2)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#3b82f6" fill-opacity="0.12"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#dots)"/>
+
+  <!-- Circuit lines -->
+  <g stroke="#3b82f6" stroke-opacity="0.18" stroke-width="1" fill="none">
+    <polyline points="600,0 600,80 680,80 680,160 760,160"/>
+    <polyline points="720,400 720,310 670,310 670,240"/>
+    <circle cx="680" cy="80" r="3" fill="#60a5fa" fill-opacity="0.45" stroke="none"/>
+    <circle cx="670" cy="240" r="3" fill="#60a5fa" fill-opacity="0.35" stroke="none"/>
+  </g>
+
+  <!-- Browser/window mockup -->
+  <g transform="translate(480, 60)">
+    <!-- Window frame -->
+    <rect x="0" y="0" width="260" height="175" rx="8" fill="#0f1e3d" stroke="#3b82f6" stroke-opacity="0.3" stroke-width="1"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="260" height="28" rx="8" fill="#1e3a5f" stroke="none"/>
+    <rect x="0" y="18" width="260" height="10" fill="#1e3a5f"/>
+    <!-- Traffic lights -->
+    <circle cx="16" cy="14" r="5" fill="#ff5f57" opacity="0.8"/>
+    <circle cx="32" cy="14" r="5" fill="#febc2e" opacity="0.8"/>
+    <circle cx="48" cy="14" r="5" fill="#28c840" opacity="0.8"/>
+    <!-- Content area lines -->
+    <rect x="12" y="38" width="100" height="8" rx="2" fill="#3b82f6" fill-opacity="0.3"/>
+    <rect x="12" y="52" width="150" height="6" rx="2" fill="#3b82f6" fill-opacity="0.15"/>
+    <rect x="12" y="64" width="120" height="6" rx="2" fill="#3b82f6" fill-opacity="0.15"/>
+    <!-- Chart bars in window -->
+    <g transform="translate(12, 85)" opacity="0.7">
+      <rect x="0"  y="30" width="14" height="40" rx="2" fill="#3b82f6"/>
+      <rect x="20" y="15" width="14" height="55" rx="2" fill="#60a5fa"/>
+      <rect x="40" y="40" width="14" height="30" rx="2" fill="#2563eb"/>
+      <rect x="60" y="10" width="14" height="60" rx="2" fill="#93c5fd"/>
+      <rect x="80" y="25" width="14" height="45" rx="2" fill="#3b82f6"/>
+      <rect x="100" y="35" width="14" height="35" rx="2" fill="#60a5fa"/>
+    </g>
+    <!-- ML curve line -->
+    <polyline points="145,155 165,130 185,120 205,108 225,100 245,85" stroke="#fb923c" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="245" cy="85" r="4" fill="#fb923c" opacity="0.9"/>
+  </g>
+
+  <!-- DB logo (stylized) -->
+  <g transform="translate(62, 68)" opacity="0.85">
+    <rect x="0" y="0" width="68" height="72" rx="4" fill="#0052cc" fill-opacity="0.2" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="34" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#60a5fa" text-anchor="middle" letter-spacing="-0.5">DB</text>
+    <line x1="10" y1="38" x2="58" y2="38" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="34" y="55" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#93c5fd" text-anchor="middle" opacity="0.7" letter-spacing="0.5">CAMPUS</text>
+  </g>
+
+  <!-- Neural / ML nodes (decorative) -->
+  <g fill="#60a5fa" opacity="0.3">
+    <circle cx="400" cy="90" r="3"/>
+    <circle cx="430" cy="120" r="2.5"/>
+    <circle cx="415" cy="155" r="2"/>
+    <circle cx="450" cy="80" r="2"/>
+    <circle cx="460" cy="140" r="3"/>
+    <circle cx="390" cy="140" r="2"/>
+  </g>
+  <g stroke="#60a5fa" stroke-opacity="0.12" stroke-width="1" fill="none">
+    <line x1="400" y1="90" x2="430" y2="120"/>
+    <line x1="430" y1="120" x2="415" y2="155"/>
+    <line x1="430" y1="120" x2="460" y2="140"/>
+    <line x1="400" y1="90" x2="450" y2="80"/>
+    <line x1="415" y1="155" x2="390" y2="140"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="110" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" letter-spacing="-1.5" fill="url(#titleGrad)">DB Campus Project</text>
+
+  <!-- Subtitle -->
+  <text x="112" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="400" fill="#93c5fd" opacity="0.7" letter-spacing="0.3">Full-Stack Web App with Integrated ML</text>
+
+  <!-- Feature chips -->
+  <g transform="translate(112, 248)">
+    <rect x="0" y="0" width="100" height="30" rx="8" fill="#1d4ed8" fill-opacity="0.25" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="50" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#93c5fd" text-anchor="middle" letter-spacing="0.3">React Frontend</text>
+
+    <rect x="115" y="0" width="100" height="30" rx="8" fill="#1d4ed8" fill-opacity="0.25" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="165" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#93c5fd" text-anchor="middle" letter-spacing="0.3">Django Backend</text>
+
+    <rect x="230" y="0" width="100" height="30" rx="8" fill="#1d4ed8" fill-opacity="0.25" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="280" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#93c5fd" text-anchor="middle" letter-spacing="0.3">ML Pipeline</text>
+  </g>
+
+  <!-- Tech stack -->
+  <g transform="translate(112, 315)" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#60a5fa" opacity="0.55">
+    <text x="0" y="0">React</text>
+    <text x="45" y="0">·</text>
+    <text x="55" y="0">Django</text>
+    <text x="110" y="0">·</text>
+    <text x="120" y="0">Machine Learning</text>
+    <text x="258" y="0">·</text>
+    <text x="268" y="0">Python</text>
+  </g>
+
+  <!-- Horizontal rule -->
+  <line x1="112" y1="335" x2="460" y2="335" stroke="#3b82f6" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Bottom label -->
+  <text x="112" y="358" font-family="system-ui, sans-serif" font-size="11" fill="#3b82f6" opacity="0.55" letter-spacing="1.5" font-weight="600">UNIVERSITY PROJECT</text>
+</svg>

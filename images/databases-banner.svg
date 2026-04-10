@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06111f"/>
+      <stop offset="100%" stop-color="#0a1929"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="50%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bg)"/>
+
+  <!-- Ambient glows -->
+  <ellipse cx="200" cy="170" rx="290" ry="210" fill="url(#glow1)" filter="url(#blur1)"/>
+  <ellipse cx="660" cy="260" rx="210" ry="170" fill="url(#glow2)" filter="url(#blur2)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#0284c7" fill-opacity="0.13"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#dots)"/>
+
+  <!-- Circuit lines -->
+  <g stroke="#0284c7" stroke-opacity="0.18" stroke-width="1" fill="none">
+    <polyline points="610,0 610,75 690,75 690,155 755,155"/>
+    <polyline points="730,400 730,315 675,315 675,245"/>
+    <circle cx="690" cy="75" r="3" fill="#38bdf8" fill-opacity="0.4" stroke="none"/>
+    <circle cx="675" cy="245" r="3" fill="#38bdf8" fill-opacity="0.35" stroke="none"/>
+  </g>
+
+  <!-- PostgreSQL elephant (stylized icon) -->
+  <g transform="translate(62, 58)" opacity="0.8">
+    <ellipse cx="40" cy="45" rx="32" ry="38" fill="#336791" fill-opacity="0.35" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.5"/>
+    <text x="40" y="40" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#7dd3fc" text-anchor="middle" letter-spacing="0">POSTGRES</text>
+    <text x="40" y="56" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#38bdf8" text-anchor="middle">SQL</text>
+  </g>
+
+  <!-- Table schema mockup on right -->
+  <g transform="translate(480, 55)" opacity="0.85">
+    <!-- Table 1 -->
+    <rect x="0" y="0" width="180" height="130" rx="6" fill="#0a1929" stroke="#0284c7" stroke-opacity="0.35" stroke-width="1"/>
+    <rect x="0" y="0" width="180" height="26" rx="6" fill="#0c4a6e" stroke="none"/>
+    <rect x="0" y="18" width="180" height="8" fill="#0c4a6e"/>
+    <text x="90" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#7dd3fc" text-anchor="middle" letter-spacing="0.3">users</text>
+    <!-- Rows -->
+    <g font-family="system-ui, sans-serif" font-size="9" fill="#7dd3fc" fill-opacity="0.65">
+      <text x="12" y="42">🔑  id  INTEGER  PK</text>
+      <text x="12" y="56">    name  VARCHAR(100)</text>
+      <text x="12" y="70">    email  VARCHAR(255)</text>
+      <text x="12" y="84">    created_at  TIMESTAMP</text>
+      <text x="12" y="98">    role  VARCHAR(50)</text>
+    </g>
+    <line x1="8" y1="107" x2="172" y2="107" stroke="#0284c7" stroke-opacity="0.25" stroke-width="1"/>
+    <text x="12" y="122" font-family="system-ui, sans-serif" font-size="8" fill="#38bdf8" fill-opacity="0.45">INDEX(email)</text>
+
+    <!-- Table 2 (offset) -->
+    <rect x="90" y="145" width="170" height="105" rx="6" fill="#0a1929" stroke="#0284c7" stroke-opacity="0.3" stroke-width="1"/>
+    <rect x="90" y="145" width="170" height="26" rx="6" fill="#0c4a6e" stroke="none"/>
+    <rect x="90" y="163" width="170" height="8" fill="#0c4a6e"/>
+    <text x="175" y="162" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#7dd3fc" text-anchor="middle" letter-spacing="0.3">orders</text>
+    <g font-family="system-ui, sans-serif" font-size="9" fill="#7dd3fc" fill-opacity="0.65">
+      <text x="102" y="182">🔑  id  INTEGER  PK</text>
+      <text x="102" y="196">🔗  user_id  INTEGER  FK</text>
+      <text x="102" y="210">    total  DECIMAL</text>
+      <text x="102" y="224">    status  VARCHAR</text>
+    </g>
+
+    <!-- Relation line -->
+    <line x1="90" y1="84" x2="105" y2="84" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="105" y1="84" x2="105" y2="196" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="105" y1="196" x2="102" y2="196" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.5"/>
+    <circle cx="90" cy="84" r="3" fill="#38bdf8" fill-opacity="0.5"/>
+    <circle cx="102" cy="196" r="3" fill="#38bdf8" fill-opacity="0.5"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="110" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="66" font-weight="800" letter-spacing="-2" fill="url(#titleGrad)">Databases</text>
+
+  <!-- Subtitle -->
+  <text x="112" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="400" fill="#7dd3fc" opacity="0.7" letter-spacing="0.3">PostgreSQL Schema Design &amp; Complex Queries</text>
+
+  <!-- Feature chips -->
+  <g transform="translate(112, 248)">
+    <rect x="0" y="0" width="105" height="30" rx="8" fill="#0369a1" fill-opacity="0.25" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="52" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#7dd3fc" text-anchor="middle" letter-spacing="0.3">Schema Design</text>
+
+    <rect x="120" y="0" width="115" height="30" rx="8" fill="#0369a1" fill-opacity="0.25" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="177" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#7dd3fc" text-anchor="middle" letter-spacing="0.3">Complex Queries</text>
+
+    <rect x="250" y="0" width="90" height="30" rx="8" fill="#0369a1" fill-opacity="0.25" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="295" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#7dd3fc" text-anchor="middle" letter-spacing="0.3">Java JDBC</text>
+  </g>
+
+  <!-- Tech stack -->
+  <g transform="translate(112, 315)" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#38bdf8" opacity="0.55">
+    <text x="0" y="0">PostgreSQL</text>
+    <text x="85" y="0">·</text>
+    <text x="95" y="0">SQL</text>
+    <text x="125" y="0">·</text>
+    <text x="135" y="0">Java</text>
+    <text x="170" y="0">·</text>
+    <text x="180" y="0">JDBC</text>
+  </g>
+
+  <!-- Horizontal rule -->
+  <line x1="112" y1="335" x2="460" y2="335" stroke="#0284c7" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Bottom label -->
+  <text x="112" y="358" font-family="system-ui, sans-serif" font-size="11" fill="#0284c7" opacity="0.6" letter-spacing="1.5" font-weight="600">UNIVERSITY PROJECT</text>
+</svg>
